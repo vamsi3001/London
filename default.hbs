@@ -118,7 +118,6 @@
             plugins: [new SwupHeadPlugin(), new SwupScriptsPlugin()],
         });
         document.addEventListener('swup:contentReplaced', event => {
-            addthis.init();
             initInfiniteScroll(window, document);
             $('body').removeClass('site-head-open');
         });
