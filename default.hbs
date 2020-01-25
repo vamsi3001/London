@@ -89,6 +89,7 @@
     {{/if}}
 
     <script src="{{asset "built/swup.js"}}" data-swup-ignore-script></script>
+    <script src="{{asset "built/SwupScriptsPlugin.js"}}" data-swup-ignore-script></script>
     <script src="{{asset "built/infinitescroll.js"}}" data-swup-ignore-script></script>
     <script
         src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -114,12 +115,14 @@
         });
 
         // Initiate Swup transitions
-        var swup = new Swup({
+        const swup = new Swup({
             plugins: [new SwupHeadPlugin(), new SwupScriptsPlugin()],
         });
         document.addEventListener('swup:contentReplaced', event => {
             initInfiniteScroll(window, document);
             $('body').removeClass('site-head-open');
+            instgrm.Embeds.process();
+            addthis.init();
         });
     </script>
 </body>
