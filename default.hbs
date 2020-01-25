@@ -89,7 +89,6 @@
     {{/if}}
 
     <script src="{{asset "built/swup.js"}}" data-swup-ignore-script></script>
-    <script src="{{asset "built/SwupScriptsPlugin.js"}}" data-swup-ignore-script></script>
     <script src="{{asset "built/infinitescroll.js"}}" data-swup-ignore-script></script>
     <script
         src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -121,11 +120,8 @@
         document.addEventListener('swup:contentReplaced', event => {
             initInfiniteScroll(window, document);
             $('body').removeClass('site-head-open');
-        });
-        
-        document.addEventListener("DOMContentLoaded", () => {
             instgrm.Embeds.process();
-            addthis.init();
+            addthis.init();            
         });
     </script>
 </body>
