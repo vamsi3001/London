@@ -121,6 +121,9 @@
         document.addEventListener('swup:contentReplaced', event => {
             initInfiniteScroll(window, document);
             $('body').removeClass('site-head-open');
+        });
+        
+        document.addEventListener("DOMContentLoaded", () => {
             instgrm.Embeds.process();
             addthis.init();
         });
