@@ -120,10 +120,10 @@
         document.addEventListener('swup:contentReplaced', event => {
             initInfiniteScroll(window, document);
             $('body').removeClass('site-head-open');
-            instgrm.destroy();
             addthis.destroy();
+            addthis.init();
             instgrm.Embeds.process();
-            addthis.init();            
+            
         });
     </script>
 </body>
